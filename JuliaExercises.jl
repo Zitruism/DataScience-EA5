@@ -70,12 +70,14 @@ println("4. Create a 3x3 integer matrix A with useful numbers. Now try A+1, A-1,
 A = rand(1:10, 3, 3)
 println("Matrix A: ", A)
 #=println("A+1 = ", A + 1)=#
-println("A+1 throws an error => ERROR: LoadError: MethodError: no method matching +(::Array{Int64,2}, ::Int64)")
+println("A .+ 1 = ", A .+ 1)
+println("A .+ 1 adds 1 to each cell of the matrix.")
 #=println("A-1 = ", A - 1)=#
-println("A-1 throws an error => ERROR: LoadError: MethodError: no method matching -(::Array{Int64,2}, ::Int64)")
+println("A .- 1 = ", A .- 1)
+println("A .- 1 substracts 1 from each cell of the matrix.")
 println("A*2 = ", A * 2)
 println("A/2 = ", A / 2)
-println("The operators * and / seem to work fine for integer values where on the other hand the operators + and - can't be applied directly and throw an error.")
+println("The operators * and / seem to work fine. Same for .+ and .- operations. Simple + or - throw an error.")
 
 #=
 5. Now multiply a 3x4 matrix with a suitable (4)vector.
